@@ -6,7 +6,7 @@ This is a sub-project of GUX framework for objective-c language under iOS CocoaT
 To learn more information about GUX framework please see other GUX projects for other languages.
 
 | 首页 | 列表导航 | 页签导航 | 编辑表单 |
-|----|----|----|----|----|
+|----|----|----|----|
 | ![首页](Others/Image/Screenshot/screenshot-1.png) | ![列表导航](Others/Image/Screenshot/screenshot-2.png)| ![页签导航](Others/Image/Screenshot/screenshot-3.png) | ![编辑表单](Others/Image/Screenshot/screenshot-4.png)
 
 | 饼状图表 | 柱状图表 |
