@@ -49,6 +49,7 @@
 		AAF16B752C7B11A9001F8EAB /* GXSwiperNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF16B742C7B11A9001F8EAB /* GXSwiperNavigator.m */; };
 		AAF16B782C7B6E29001F8EAB /* Styles.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF16B772C7B6E29001F8EAB /* Styles.m */; };
 		AAF16B7C2C7B96A8001F8EAB /* ListViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF16B7B2C7B96A8001F8EAB /* ListViewViewController.m */; };
+		AAF7CA572C82A83A00AF9574 /* BottomSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF7CA562C82A7F200AF9574 /* BottomSheetViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +161,8 @@
 		AAF16B772C7B6E29001F8EAB /* Styles.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Styles.m; sourceTree = "<group>"; };
 		AAF16B7B2C7B96A8001F8EAB /* ListViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewViewController.m; sourceTree = "<group>"; };
 		AAF16B7D2C7B96B7001F8EAB /* ListViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewViewController.h; sourceTree = "<group>"; };
+		AAF7CA552C82A7DD00AF9574 /* BottomSheetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomSheetViewController.h; sourceTree = "<group>"; };
+		AAF7CA562C82A7F200AF9574 /* BottomSheetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomSheetViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -443,6 +446,8 @@
 				AA271DDF2C81C200000C266D /* PieChartViewController.m */,
 				AA271DE02C81C286000C266D /* GaugeChartViewController.h */,
 				AA271DE12C81C297000C266D /* GaugeChartViewController.m */,
+				AAF7CA552C82A7DD00AF9574 /* BottomSheetViewController.h */,
+				AAF7CA562C82A7F200AF9574 /* BottomSheetViewController.m */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -553,6 +558,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAF7CA572C82A83A00AF9574 /* BottomSheetViewController.m in Sources */,
 				AA271DEB2C821126000C266D /* GXCircularPercentage.m in Sources */,
 				AA271DEC2C821126000C266D /* GXCircularPercentageLayer.m in Sources */,
 				AA271DE22C81C36F000C266D /* LineChartViewController.m in Sources */,

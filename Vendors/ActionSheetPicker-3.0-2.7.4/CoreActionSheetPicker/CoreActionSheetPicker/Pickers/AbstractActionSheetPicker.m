@@ -142,9 +142,10 @@ CG_INLINE BOOL isIPhone4() {
 
         UIBarButtonItem *sysCancelButton = [self createButtonWithType:UIBarButtonSystemItemCancel target:self
                                                                action:@selector(actionPickerCancel:)];
-
+      
         [self setCancelBarButtonItem:sysCancelButton];
         [self setDoneBarButtonItem:sysDoneButton];
+      
 
         self.tapDismissAction = TapActionDismiss;
         //allows us to use this without needing to store a reference in calling class
@@ -152,6 +153,7 @@ CG_INLINE BOOL isIPhone4() {
 
         NSMutableParagraphStyle *labelParagraphStyle = [[NSMutableParagraphStyle alloc] init];
         labelParagraphStyle.alignment = NSTextAlignmentCenter;
+      
         self.pickerTextAttributes = [@{NSParagraphStyleAttributeName : labelParagraphStyle} mutableCopy];
 
         self.context = [CIContext contextWithOptions:nil];
@@ -510,7 +512,6 @@ CG_INLINE BOOL isIPhone4() {
     if (!self.hideCancel) {
         [barItems addObject:self.cancelBarButtonItem];
     }
-
     NSInteger index = 0;
     for (NSDictionary *buttonDetails in self.customButtons) {
         NSString *buttonTitle = buttonDetails[kButtonTitle];
@@ -535,7 +536,6 @@ CG_INLINE BOOL isIPhone4() {
         [barItems addObject:flexSpace];
     }
     [barItems addObject:self.doneBarButtonItem];
-
     [pickerToolbar setItems:barItems animated:NO];
     [pickerToolbar layoutIfNeeded];
     return pickerToolbar;
@@ -594,10 +594,21 @@ CG_INLINE BOOL isIPhone4() {
 }
 
 - (UIBarButtonItem *)createButtonWithType:(UIBarButtonSystemItem)type target:(id)target action:(SEL)buttonAction {
-
-    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:type target:target
-                                                                               action:buttonAction];
-    return barButton;
+  NSString* title = @"";
+  UIBarButtonItemStyle style = UIBarButtonItemStyleDone;
+  if (type == UIBarButtonSystemItemDone) {
+    title = @"确定";
+    style = UIBarButtonItemStyleDone;
+  } else if (type == UIBarButtonSystemItemCancel) {
+    title = @"取消";
+  } else if (type == UIBarButtonSystemItemFlexibleSpace) {
+    return  [[UIBarButtonItem alloc] initWithBarButtonSystemItem:type 
+                                                          target:target
+                                                          action:buttonAction];
+  }
+  UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithTitle:title style:style target:target
+                                                                             action:buttonAction];
+  return barButton;
 }
 
 #pragma mark - Custom Color

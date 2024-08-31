@@ -13,14 +13,20 @@
 ** ─██████████████─██████████████─████████──████████─
 ** ──────────────────────────────────────────────────
 */
-#import <UIKit/UIKit.h>
-#import "AppDelegate.h"
+#import "BottomSheetViewController.h"
 
-int main(int argc, char * argv[]) {
+@interface BottomSheetViewController ()
+
+
+@end
+
+@implementation BottomSheetViewController
+
+- (void)viewDidLoad {
+  [super viewDidLoad];
+  self.view.backgroundColor = UIColor.redColor;
   
-  NSString * appDelegateClassName;
-  @autoreleasepool {
-    appDelegateClassName = NSStringFromClass([AppDelegate class]);
-  }
-  return UIApplicationMain(argc, argv, nil, appDelegateClassName);
 }
+
+@end
+

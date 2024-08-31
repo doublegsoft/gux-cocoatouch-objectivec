@@ -170,13 +170,16 @@
 - (UIView *)configuredPickerView {
     CGRect datePickerFrame = CGRectMake(0, 44, self.viewSize.width, self.getDatePickerHeight);
     UIDatePicker *datePicker = [[UIDatePicker alloc] initWithFrame:datePickerFrame];
-    datePicker.datePickerMode = self.datePickerMode;
+  
+  datePicker.datePickerMode = self.datePickerMode;
+  
     datePicker.maximumDate = self.maximumDate;
     datePicker.minimumDate = self.minimumDate;
     datePicker.minuteInterval = self.minuteInterval;
     datePicker.calendar = self.calendar;
     datePicker.timeZone = self.timeZone;
-    datePicker.locale = self.locale;
+    // datePicker.locale = self.locale;
+  datePicker.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
     if (@available(iOS 13.4, *)) {
         datePicker.preferredDatePickerStyle = self.datePickerStyle;
     } else {

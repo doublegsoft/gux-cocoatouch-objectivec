@@ -28,6 +28,7 @@
 #import "VC/Page/Widget/LineChartViewController.h"
 #import "VC/Page/Widget/PieChartViewController.h"
 #import "VC/Page/Widget/GaugeChartViewController.h"
+#import "VC/Page/Widget/BottomSheetViewController.h"
 
 #import "iCarousel.h"
 
@@ -79,6 +80,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
+  self.navigationController.interactivePopGestureRecognizer.enabled = NO;
   self.title = @"组件介绍";
   
   self.notifs4App = [[NSMutableArray alloc] init];
@@ -321,7 +323,7 @@
                          andSubtitle:@"bottom_sheet"
                             andImage:@"Image.Widget.Bottom_Sheet"
                       andDescription:@"底部弹窗提供从底部弹出的编辑界面，通常是自定义的信息录入界面。"
-                         andSelector:@selector(gotoListView:)];
+                         andSelector:@selector(openBottomSheet:)];
   [scroll addSubview:widget];
   
   contentHeight += cardHeight + Styles.padding;
@@ -489,6 +491,13 @@
   GaugeChartViewController* vc = [[GaugeChartViewController alloc] init];
   vc.hidesBottomBarWhenPushed = YES;
   [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)openBottomSheet:(UIButton *)sender {
+  BottomSheetViewController* vc = [[BottomSheetViewController alloc] init];
+  vc.hidesBottomBarWhenPushed = YES;
+  vc.modalPresentationStyle = UIModalPresentationPopover;
+  [self presentViewController:vc animated:YES completion:^() {}];
 }
 
 #pragma mark - GXScrollNotificationDelegate
