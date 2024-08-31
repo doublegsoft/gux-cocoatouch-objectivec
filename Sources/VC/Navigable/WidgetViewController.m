@@ -16,6 +16,7 @@
 #import "WidgetViewController.h"
 
 #import "VC/Page/Widget/ListViewViewController.h"
+#import "VC/Page/Widget/GridViewViewController.h"
 #import "VC/Page/Widget/CalendarViewController.h"
 #import "VC/Page/Widget/TabsViewController.h"
 #import "VC/Page/Widget/GridNavigatorViewController.h"
@@ -263,7 +264,7 @@
                          andSubtitle:@"grid_view"
                             andImage:@"Image.Widget.Grid_View"
                       andDescription:@"栅格列表以卡片的形式双列竖式展示集合内容，是应用程序最为常用的集合内容展现部件。"
-                         andSelector:@selector(gotoListView:)];
+                         andSelector:@selector(gotoGridView:)];
   [scroll addSubview:widget];
   
   contentHeight += cardHeight + Styles.padding;
@@ -417,6 +418,12 @@
 
 - (void)gotoListView:(UIButton *)sender {
   ListViewViewController* vc = [[ListViewViewController alloc] init];
+  vc.hidesBottomBarWhenPushed = YES;
+  [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)gotoGridView:(UIButton *)sender {
+  GridViewViewController* vc = [[GridViewViewController alloc] init];
   vc.hidesBottomBarWhenPushed = YES;
   [self.navigationController pushViewController:vc animated:YES];
 }

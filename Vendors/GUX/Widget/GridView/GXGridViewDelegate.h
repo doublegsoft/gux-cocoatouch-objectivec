@@ -13,11 +13,15 @@
 ** ─██████████████─██████████████─████████──████████─
 ** ──────────────────────────────────────────────────
 */
-#pragma once
+#import <Foundation/Foundation.h>
 
-#include <UIKit/UIKit.h>
+@class GXGridView;
 
-@interface WelcomeViewController : UIViewController <UIScrollViewDelegate>
+@protocol GXGridViewDelegate <NSObject>
 
+/*!
+** The process is handled to goto another page.
+*/
+- (void)gridView:(GXGridView*)gridView gotoWhereAtIndex:(NSInteger)index;
 
 @end

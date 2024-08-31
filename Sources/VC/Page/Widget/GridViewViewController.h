@@ -13,11 +13,10 @@
 ** ─██████████████─██████████████─████████──████████─
 ** ──────────────────────────────────────────────────
 */
-#pragma once
+#import <UIKit/UIKit.h>
 
-#include <UIKit/UIKit.h>
-
-@interface WelcomeViewController : UIViewController <UIScrollViewDelegate>
+@interface GridViewViewController : UIViewController
 
 
 @end
+

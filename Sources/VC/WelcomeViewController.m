@@ -23,6 +23,16 @@
 
 @interface WelcomeViewController ()
 
+/*!
+** swiper control
+*/
+@property (nonatomic, strong) UIScrollView* scrollView;
+
+/*!
+** page indicator
+*/
+@property (nonatomic, strong) UIPageControl* pageControl;
+
 @end
 
 @implementation WelcomeViewController

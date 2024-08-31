@@ -13,11 +13,17 @@
 ** ─██████████████─██████████████─████████──████████─
 ** ──────────────────────────────────────────────────
 */
-#pragma once
+#import <UIKit/UIKit.h>
 
-#include <UIKit/UIKit.h>
+#import "GXGridViewDelegate.h"
+#import "GXGridViewDataSource.h"
 
-@interface WelcomeViewController : UIViewController <UIScrollViewDelegate>
+@interface GXGridView : UIView
 
+@property (nonatomic, weak) id<GXGridViewDelegate> delegate;
+
+@property (nonatomic, strong) id<GXGridViewDataSource> dataSource;
+
+- (void)render;
 
 @end

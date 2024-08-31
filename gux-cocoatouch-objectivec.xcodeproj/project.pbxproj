@@ -50,6 +50,8 @@
 		AAF16B782C7B6E29001F8EAB /* Styles.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF16B772C7B6E29001F8EAB /* Styles.m */; };
 		AAF16B7C2C7B96A8001F8EAB /* ListViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF16B7B2C7B96A8001F8EAB /* ListViewViewController.m */; };
 		AAF7CA572C82A83A00AF9574 /* BottomSheetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF7CA562C82A7F200AF9574 /* BottomSheetViewController.m */; };
+		AAF7CA5E2C8374C100AF9574 /* GXGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF7CA5B2C83703600AF9574 /* GXGridView.m */; };
+		AAF7CA612C837CAA00AF9574 /* GridViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAF7CA602C837CAA00AF9574 /* GridViewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -163,6 +165,12 @@
 		AAF16B7D2C7B96B7001F8EAB /* ListViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewViewController.h; sourceTree = "<group>"; };
 		AAF7CA552C82A7DD00AF9574 /* BottomSheetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomSheetViewController.h; sourceTree = "<group>"; };
 		AAF7CA562C82A7F200AF9574 /* BottomSheetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomSheetViewController.m; sourceTree = "<group>"; };
+		AAF7CA5A2C83702600AF9574 /* GXGridView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXGridView.h; sourceTree = "<group>"; };
+		AAF7CA5B2C83703600AF9574 /* GXGridView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GXGridView.m; sourceTree = "<group>"; };
+		AAF7CA5C2C83704700AF9574 /* GXGridViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXGridViewDataSource.h; sourceTree = "<group>"; };
+		AAF7CA5D2C83705900AF9574 /* GXGridViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GXGridViewDelegate.h; sourceTree = "<group>"; };
+		AAF7CA5F2C837C9200AF9574 /* GridViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GridViewViewController.h; sourceTree = "<group>"; };
+		AAF7CA602C837CAA00AF9574 /* GridViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GridViewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +253,10 @@
 		AA4F595B2C80A1FD00846508 /* GridView */ = {
 			isa = PBXGroup;
 			children = (
+				AAF7CA5A2C83702600AF9574 /* GXGridView.h */,
+				AAF7CA5B2C83703600AF9574 /* GXGridView.m */,
+				AAF7CA5C2C83704700AF9574 /* GXGridViewDataSource.h */,
+				AAF7CA5D2C83705900AF9574 /* GXGridViewDelegate.h */,
 			);
 			path = GridView;
 			sourceTree = "<group>";
@@ -348,14 +360,11 @@
 		AAC972AC2C78FE3000C4CDB9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				AAF7CA592C83410800AF9574 /* Common */,
 				AA99C6812C790580008B53E9 /* VC */,
 				AAC972AD2C78FE3000C4CDB9 /* AppDelegate.h */,
 				AAC972AE2C78FE3000C4CDB9 /* AppDelegate.m */,
 				AAC972BF2C78FE3200C4CDB9 /* main.m */,
-				AAF16B762C7B6E1D001F8EAB /* Styles.h */,
-				AAF16B772C7B6E29001F8EAB /* Styles.m */,
-				AA500CFA2C7F94D500D8AAD2 /* SDK.h */,
-				AA500CFB2C7F94E900D8AAD2 /* SDK.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -422,6 +431,8 @@
 			children = (
 				AAF16B7D2C7B96B7001F8EAB /* ListViewViewController.h */,
 				AAF16B7B2C7B96A8001F8EAB /* ListViewViewController.m */,
+				AAF7CA5F2C837C9200AF9574 /* GridViewViewController.h */,
+				AAF7CA602C837CAA00AF9574 /* GridViewViewController.m */,
 				AAA252452C7D99DE00DD699C /* ListNavigatorViewController.h */,
 				AAA252432C7D99CE00DD699C /* ListNavigatorViewController.m */,
 				AAEA22A52C7BC98700CBD9F4 /* CalendarViewController.h */,
@@ -450,6 +461,17 @@
 				AAF7CA562C82A7F200AF9574 /* BottomSheetViewController.m */,
 			);
 			path = Widget;
+			sourceTree = "<group>";
+		};
+		AAF7CA592C83410800AF9574 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AA500CFA2C7F94D500D8AAD2 /* SDK.h */,
+				AA500CFB2C7F94E900D8AAD2 /* SDK.m */,
+				AAF16B762C7B6E1D001F8EAB /* Styles.h */,
+				AAF16B772C7B6E29001F8EAB /* Styles.m */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -558,6 +580,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAF7CA5E2C8374C100AF9574 /* GXGridView.m in Sources */,
 				AAF7CA572C82A83A00AF9574 /* BottomSheetViewController.m in Sources */,
 				AA271DEB2C821126000C266D /* GXCircularPercentage.m in Sources */,
 				AA271DEC2C821126000C266D /* GXCircularPercentageLayer.m in Sources */,
@@ -568,6 +591,7 @@
 				AAB2B6932C7FE0F800A7F33C /* GXScrollNotification.m in Sources */,
 				AAB2B68C2C7FD6CC00A7F33C /* EditableFormViewController.m in Sources */,
 				AAB2B68D2C7FD6CC00A7F33C /* ReadonlyFormViewController.m in Sources */,
+				AAF7CA612C837CAA00AF9574 /* GridViewViewController.m in Sources */,
 				AA500CFC2C7F94E900D8AAD2 /* SDK.m in Sources */,
 				AA2799152C7EF2F0008C4660 /* SwiperNavigatorViewController.m in Sources */,
 				AA502E9D2C7E278B00691C96 /* ScrollNavigatorViewController.m in Sources */,
